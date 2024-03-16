@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import Wantcook from "../Wantcook/Wantcook";
 import Iteam from "../Iteam/Iteam";
 import './iteams.css'
+import CurrentCokking from "../CurrentCokking/CurrentCokking";
 
 const Recipes = () => {
     const [iteams, setIteams] = useState([]);
     const [wantCook, setWantCook] = useState([]);
+    const [currentCokking, setCurrentCokking] = useState([]);
 
     useEffect(() => {
         fetch('api.json')
@@ -17,9 +19,18 @@ const Recipes = () => {
     }, []);
 
     const handleSetWantCook = (cookIteam) => {
-        // console.log(cookIteam);
+        // console.log('Remove: ', cookIteam, iteamID);
         const newCook = [...wantCook, cookIteam];
         setWantCook(newCook);
+    }
+    const handlePrepareButton = (iteamID) => {
+        console.log('remove', iteamID);
+        const remainingRecipies = wantCook.filter(cookIteam => cookIteam.recipe_id != iteamID);
+
+        setWantCook(remainingRecipies)
+
+
+
     }
 
     // console.log(iteams);
@@ -54,11 +65,17 @@ const Recipes = () => {
 
 
                 <div className="flex-1">
-                    <h2>wantCook: {wantCook.length}</h2>
-                    <Wantcook wantCook={wantCook}></Wantcook>
+                    <h1 className="font-bold">Want to cook: {wantCook.length}</h1>
+                    <Wantcook
+                        handlePrepareButton={handlePrepareButton}
+                        wantCook={wantCook}></Wantcook>
+                    <br />
+                    <br />
+                    <br />
+                    <CurrentCokking></CurrentCokking>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

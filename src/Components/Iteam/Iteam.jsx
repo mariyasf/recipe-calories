@@ -25,8 +25,6 @@ const Iteam = ({ iteam, handleSetWantCook }) => {
                     </div>
                     <div className="card-actions justify-end">
                         <button className="btn btn-primary" onClick={() => {
-                            // console.log(index);
-                            // setWantCook(!index)
                             handleSetWantCook(iteam)
                         }}>Cook</button>
 

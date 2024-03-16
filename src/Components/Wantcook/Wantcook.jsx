@@ -1,13 +1,12 @@
 
-const Wantcook = ({ wantCook }) => {
+const Wantcook = ({ wantCook, handlePrepareButton }) => {
     console.log(wantCook);
-    const [recipe_name, preparing_time, calories] = wantCook
-    // console.log(recipe_name, preparing_time, calories);
+
     return (
         <div>
-            <h1>Want to cook:</h1>
+
             <table className="table">
-                <thead>
+                <thead className="font-bold text-black">
                     <tr>
                         <th>Name</th>
                         <th>Time</th>
@@ -21,7 +20,7 @@ const Wantcook = ({ wantCook }) => {
                             <td>{recipe.recipe_name}</td>
                             <td>{recipe.preparing_time}</td>
                             <td>{recipe.calories}</td>
-                            <td><button className="btn btn-success">Preparing</button></td>
+                            <td><button onClick={() => handlePrepareButton(recipe.recipe_id)} className="btn btn-success">Preparing</button></td>
                         </tr>
                     ))}
                 </tbody>
