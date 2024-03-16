@@ -26,6 +26,7 @@ const CurrentCokking = ({ currentCokking }) => {
             <table className="mt-4 table overflow-x-auto bg-base-300">
                 <thead className="font-bold text-black">
                     <tr>
+                        <th></th>
                         <th>Name</th>
                         <th>Time</th>
                         <th>Calories</th>
@@ -37,6 +38,7 @@ const CurrentCokking = ({ currentCokking }) => {
                         currentCokking.map((recipe, index) => (
 
                             < tr key={index} >
+                                <td>{index + 1}</td>
                                 <td>{recipe.recipe_name}</td>
                                 <td>{recipe.preparing_time}</td>
                                 <td>{recipe.calories}</td>
@@ -44,6 +46,7 @@ const CurrentCokking = ({ currentCokking }) => {
                         ))
                     }
                     <tr className="font-bold">
+                        <td></td>
                         <td></td>
                         <td>Total Time = {totalTime}</td>
                         <td>Total Calories = {totalCalories}</td>
