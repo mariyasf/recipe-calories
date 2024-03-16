@@ -23,14 +23,17 @@ const Recipes = () => {
         const newCook = [...wantCook, cookIteam];
         setWantCook(newCook);
     }
+
     const handlePrepareButton = (iteamID) => {
         console.log('remove', iteamID);
         const remainingRecipies = wantCook.filter(cookIteam => cookIteam.recipe_id != iteamID);
-
         setWantCook(remainingRecipies)
 
+        const recipe = wantCook.find(cookIteam => cookIteam.recipe_id === iteamID);
+        // console.log(recipe);
+        const preparedRecipe = [...currentCokking, recipe]
 
-
+        setCurrentCokking(preparedRecipe);
     }
 
     // console.log(iteams);
@@ -53,9 +56,6 @@ const Recipes = () => {
                                     key={iteam.recipe_id}
                                     iteam={iteam}
                                     handleSetWantCook={handleSetWantCook} />)
-
-
-
                         }
                         {/* {console.log(iteams)} */}
                     </div >
@@ -69,10 +69,12 @@ const Recipes = () => {
                     <Wantcook
                         handlePrepareButton={handlePrepareButton}
                         wantCook={wantCook}></Wantcook>
+
+
                     <br />
                     <br />
                     <br />
-                    <CurrentCokking></CurrentCokking>
+                    <CurrentCokking currentCokking={currentCokking}></CurrentCokking>
                 </div>
             </div>
         </div >
