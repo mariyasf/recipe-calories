@@ -21,7 +21,7 @@ const CurrentCokking = ({ currentCokking }) => {
 
 
     return (
-        <div>
+        <div className=" border-[#c1c0c0] border-2">
             <h1 className="font-bold">Current Cokking: {currentCokking.length}</h1>
             <table className="table">
                 <thead className="font-bold text-black">
@@ -34,9 +34,9 @@ const CurrentCokking = ({ currentCokking }) => {
                 </thead>
                 <tbody id="seatTableBody">
                     {
-                        currentCokking.map(recipe => (
-                            // const time=time+totalT
-                            < tr key={recipe.recipe_id} >
+                        currentCokking.map((recipe, index) => (
+
+                            < tr key={index} >
                                 <td>{recipe.recipe_name}</td>
                                 <td>{recipe.preparing_time}</td>
                                 <td>{recipe.calories}</td>

@@ -1,14 +1,14 @@
 .single-iteam-container {
     border: 2px solid rgb(26, 215, 77);
     border-radius: 5px;
-    text-align: left;
+    /* text-align: left; */
 }
 
-.single-iteam-container h3 {
+/* .single-iteam-container h3 {
     font-size: large;
     font-weight: bold;
 
-}
+} */
 
 
 .single-iteam-container h1,

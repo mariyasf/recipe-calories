@@ -3,7 +3,7 @@ const Wantcook = ({ wantCook, handlePrepareButton }) => {
     console.log(wantCook);
 
     return (
-        <div>
+        <div className=" border-[#c1c0c0] border-2">
 
             <table className="table">
                 <thead className="font-bold text-black">
@@ -15,12 +15,12 @@ const Wantcook = ({ wantCook, handlePrepareButton }) => {
                     </tr>
                 </thead>
                 <tbody id="seatTableBody">
-                    {wantCook.map(recipe => (
-                        <tr key={recipe.recipe_id}>
+                    {wantCook.map((recipe, index) => (
+                        <tr key={index}>
                             <td>{recipe.recipe_name}</td>
                             <td>{recipe.preparing_time}</td>
                             <td>{recipe.calories}</td>
-                            <td><button onClick={() => handlePrepareButton(recipe.recipe_id)} className="btn btn-success">Preparing</button></td>
+                            <td><button onClick={() => handlePrepareButton(recipe.id)} className="btn btn-success">Preparing</button></td>
                         </tr>
                     ))}
                 </tbody>

@@ -1,4 +1,5 @@
-
+import { MdOutlineLocalFireDepartment } from "react-icons/md";
+import { MdOutlineWatchLater } from "react-icons/md";
 import './iteam.css'
 
 const Iteam = ({ iteam, handleSetWantCook }) => {
@@ -6,34 +7,38 @@ const Iteam = ({ iteam, handleSetWantCook }) => {
     const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = iteam;
     return (
         <div >
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img className='w-full' src={recipe_image} /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">{recipe_name}</h2>
-                    <p>{short_description}</p>
-                    <hr />
-                    <h3>Ingredients: {ingredients.length}</h3>
-                    {
-                        ingredients.map((ingre, index) => (
-                            <li key={`${iteam.recipe_id}_${index}`}>{ingre}</li>
-                        ))
-                    }
-                    <hr />
-                    <div className='flex gap-5'>
+            <div className="card lg:w-96 bg-base-100 shadow-xl text-left border-[#c1c0c0] border-2">
+                <figure><img className='w-full h-[200px]' src={recipe_image} alt="" /></figure>
+
+                <div>
+                    <h2 className="pt-4 card-title">{recipe_name}</h2>
+                    <p className='py-4 border-b-2 border-black'>{short_description}</p>
+
+                    <h3 className='py-4 font-bold'>Ingredients: {ingredients.length}</h3>
+                    <div className='pl-4 pb-4 border-b-2 border-black'>
+                        {
+                            ingredients.map((ingre, index) => (
+                                <li key={`${iteam.recipe_id}_${index}`}>{ingre}</li>
+                            ))
+                        }
+                    </div>
+                    <div className='flex gap-5 py-4'>
+                        <MdOutlineWatchLater />
                         <p>{preparing_time}</p>
+                        <MdOutlineLocalFireDepartment />
                         <p>{calories}</p>
                     </div>
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary" onClick={() => {
+                    <div className="card-actions justify-center">
+                        <button className="btn btn-success" onClick={() => {
                             handleSetWantCook(iteam)
-                        }}>Cook</button>
+                        }}>Want to Cook</button>
 
                     </div>
                 </div>
             </div>
 
 
-        </div>
+        </div >
     );
 };
 

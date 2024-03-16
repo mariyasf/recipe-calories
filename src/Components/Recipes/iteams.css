@@ -1,5 +1,9 @@
 .iteam-container {
-    display: grid;
+    /* border: 2px solid red;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px; */
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 10px; */
 }
