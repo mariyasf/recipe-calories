@@ -1,0 +1,26 @@
+.single-iteam-container {
+    border: 2px solid rgb(26, 215, 77);
+    border-radius: 5px;
+    text-align: left;
+}
+
+.single-iteam-container h3 {
+    font-size: large;
+    font-weight: bold;
+
+}
+
+
+.single-iteam-container h1,
+.single-iteam-container h3,
+.single-iteam-container p {
+    padding: 10px 0;
+}
+
+hr {
+    border: 1px solid rgb(196, 207, 202);
+}
+
+.single-iteam-container li {
+    padding: 5px 0;
+}

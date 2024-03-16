@@ -1,0 +1,7 @@
+.bg-banner {
+    background: linear-gradient(180deg, #929292 0%, #5d5e6c 100%), url('../images/banner.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+    border-radius: 16px;
+}

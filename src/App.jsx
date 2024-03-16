@@ -1,13 +1,15 @@
 import './App.css'
 import HeaderPart from './Components/HeaderPart/HeaderPart'
+import Banner from './Components/BannerPart/Banner'
+import Recipes from './Components/Recipes/Recipes'
 
 function App() {
 
   return (
     <>
       <HeaderPart></HeaderPart>
-
-      <h1>Vite + React</h1>
+      <Banner></Banner>
+      <Recipes></Recipes>
 
     </>
   )
