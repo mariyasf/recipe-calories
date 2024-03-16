@@ -22,11 +22,15 @@ const Iteam = ({ iteam, handleSetWantCook }) => {
                             ))
                         }
                     </div>
-                    <div className='flex gap-5 py-4'>
-                        <MdOutlineWatchLater />
-                        <p>{preparing_time}</p>
-                        <MdOutlineLocalFireDepartment />
-                        <p>{calories}</p>
+                    <div className='flex gap-5 py-4 justify-between'>
+                        <div className="flex gap-2">
+                            <MdOutlineWatchLater />
+                            <p>{preparing_time}</p>
+                        </div>
+                        <div className="flex gap-2">
+                            <MdOutlineLocalFireDepartment />
+                            <p>{calories}</p>
+                        </div>
                     </div>
                     <div className="card-actions justify-center">
                         <button className="btn btn-success" onClick={() => {

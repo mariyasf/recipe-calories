@@ -3,7 +3,7 @@ const Wantcook = ({ wantCook, handlePrepareButton }) => {
     console.log(wantCook);
 
     return (
-        <div className=" border-[#c1c0c0] border-2">
+        <div className="mt-4 bg-base-300">
 
             <table className="table">
                 <thead className="font-bold text-black">

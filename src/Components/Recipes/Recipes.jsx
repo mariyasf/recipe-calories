@@ -48,8 +48,8 @@ const Recipes = () => {
             </section>
 
             <div className="lg:flex gap-10 mt-10">
-                <div className="">
-                    <div className="iteam-container grid grid-cols-2 gap-4">
+                <div className="flex-1">
+                    <div className="iteam-container gap-4">
                         {
                             iteams.map((iteam, index) =>
                                 <Iteam
@@ -61,7 +61,7 @@ const Recipes = () => {
                 </div>
 
 
-                <div className="mt-10 lg:mt-0">
+                <div className="flex-1 mt-10 lg:mt-0">
                     <h1 className="font-bold">Want to cook: {wantCook.length}</h1>
                     <Wantcook
                         handlePrepareButton={handlePrepareButton}

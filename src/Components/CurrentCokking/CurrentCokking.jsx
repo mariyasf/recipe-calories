@@ -21,9 +21,9 @@ const CurrentCokking = ({ currentCokking }) => {
 
 
     return (
-        <div className=" border-[#c1c0c0] border-2">
+        <div className="">
             <h1 className="font-bold">Current Cokking: {currentCokking.length}</h1>
-            <table className="table">
+            <table className="mt-4 table overflow-x-auto bg-base-300">
                 <thead className="font-bold text-black">
                     <tr>
                         <th>Name</th>
