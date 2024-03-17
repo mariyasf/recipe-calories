@@ -3,7 +3,7 @@ const Wantcook = ({ wantCook, handlePrepareButton }) => {
     console.log(wantCook);
 
     return (
-        <div className="mt-4 bg-base-300">
+        <div className="mt-4 bg-base-300 overflow-x-auto">
 
             <table className="table">
                 <thead className="font-bold text-black">
