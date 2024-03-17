@@ -17,6 +17,7 @@ const Wantcook = ({ wantCook, handlePrepareButton }) => {
                 </thead>
                 <tbody id="seatTableBody">
                     {wantCook.map((recipe, index) => (
+                        
                         <tr key={index}>
                             <td>{index + 1}</td>
                             <td>{recipe.recipe_name}</td>

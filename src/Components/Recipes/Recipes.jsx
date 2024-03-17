@@ -5,6 +5,8 @@ import Wantcook from "../Wantcook/Wantcook";
 import Iteam from "../Iteam/Iteam";
 import './iteams.css'
 import CurrentCokking from "../CurrentCokking/CurrentCokking";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Recipes = () => {
     const [iteams, setIteams] = useState([]);
@@ -20,6 +22,10 @@ const Recipes = () => {
 
     const handleSetWantCook = (cookIteam) => {
         // console.log('Remove: ', cookIteam, iteamID);
+        if (wantCook.some(item => item.recipe_id === cookIteam.recipe_id)) {
+            toast("You've already selected this item.");
+            return;
+        }
         const newCook = [...wantCook, { ...cookIteam, id: Date.now() }];
         setWantCook(newCook);
     }
@@ -38,7 +44,7 @@ const Recipes = () => {
 
     // console.log(iteams);
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto relative">
             <section className="space-y-5 text-center mt-16">
                 <h1 className="text-5xl font-bold">Our Recipes</h1>
                 <p className="lg:w-[900px] mx-auto">
@@ -46,6 +52,7 @@ const Recipes = () => {
                     From quick and easy weeknight meals to impressive gourmet creations, each recipe is meticulously developed and accompanied by clear instructions and vibrant imagery, ensuring a seamless cooking experience for both novice and seasoned chefs alike.
                 </p>
             </section>
+            <ToastContainer />
 
             <div className="lg:flex gap-10 mt-10">
                 <div className="flex-1">
