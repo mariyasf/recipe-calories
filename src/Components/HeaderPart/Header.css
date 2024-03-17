@@ -1,0 +1,10 @@
+.form-control {
+    display: none;
+}
+
+/* Media query for larger devices */
+@media (min-width: 768px) {
+    .form-control {
+        display: block;
+    }
+}
