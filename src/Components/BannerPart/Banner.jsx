@@ -6,7 +6,7 @@ const Banner = () => {
 
             <section
                 className="bg-banner  mt-10 py-20 mx-auto">
-                <div className="space-y-10 mx-10 ml-16 ">
+                <div className="space-y-10 mx-4 lg:mx-10 lg:ml-16 ">
                     <h1
                         className="mx-auto text-white font-bold text-4xl lg:text-6xl lg:w-[850px]">
                         Discover an exceptional cooking class tailored for you!
